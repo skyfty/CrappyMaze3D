@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
 
 	private int currentLevel;
 	private int finishLevel;
+	private bool isPlaying = false;
 
 	// Use this for initialization
 	void Start () {
@@ -59,8 +60,15 @@ public class GameManager : MonoBehaviour {
 			break;
 		case STATE_MENU_IN:
 			canvasManager.GetComponent<CanvasManager> ().MoveIn ();
-			if (canvasManager.GetComponent<CanvasManager> ().IsFinishMoveIn ())
-				state = STATE_MENU_WAIT;
+				if (canvasManager.GetComponent<CanvasManager>().IsFinishMoveIn())
+				{
+					state = STATE_MENU_WAIT;
+					if (isPlaying)
+                    {
+                        showAd();
+
+                    }
+                }
 			break;
 		case STATE_MENU_WAIT:
 			break;
@@ -93,7 +101,7 @@ public class GameManager : MonoBehaviour {
 			canvasManager.GetComponent<CanvasManager> ().buttonLevelManager.GetComponent<ButtonLevelManager> ().SetLevel (currentLevel, finishLevel);
 			canvasManager.GetComponent<CanvasManager> ().buttonLevelManager.GetComponent<ButtonLevelManager> ().SetButtonLevel ();
 			state = STATE_MAZE_OUT;
-            showAd();
+            //
            break;
 		case STATE_MAZE_OUT:
 			maze.GetComponent<Maze> ().KeepMoveOut ();
@@ -101,8 +109,11 @@ public class GameManager : MonoBehaviour {
 				player.GetComponent<Player> ().PreparePlayer ();
 				canvasManager.GetComponent<CanvasManager> ().MoveIn ();
 				state = STATE_MENU_IN;
-			}
-			break;
+					isPlaying = true;
+				//showAd();
+
+				}
+                break;
 		default:
 			break;
 		}

@@ -75,6 +75,7 @@ public class CanvasManager : MonoBehaviour {
 				buttonExit.GetComponent<EffectMoveInOut2D> ().PrepareMoveOut ();
 				buttonLevelManager.GetComponent<ButtonLevelManager> ().PrepareMoveOut ();
 				state = STATE_MENU_WAIT;
+
 			}
 			break;
 		case STATE_MENU_WAIT:
