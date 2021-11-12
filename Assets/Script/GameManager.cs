@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HuaweiService;
 
 public class GameManager : MonoBehaviour {
 
@@ -92,7 +93,8 @@ public class GameManager : MonoBehaviour {
 			canvasManager.GetComponent<CanvasManager> ().buttonLevelManager.GetComponent<ButtonLevelManager> ().SetLevel (currentLevel, finishLevel);
 			canvasManager.GetComponent<CanvasManager> ().buttonLevelManager.GetComponent<ButtonLevelManager> ().SetButtonLevel ();
 			state = STATE_MAZE_OUT;
-			break;
+            showAd();
+           break;
 		case STATE_MAZE_OUT:
 			maze.GetComponent<Maze> ().KeepMoveOut ();
 			if (maze.GetComponent<Maze> ().IsFinishMoveOut ()) {
@@ -133,4 +135,48 @@ public class GameManager : MonoBehaviour {
 			return true;
 		return false;
 	}
+
+    public class MAdListener : HuaweiService.ads.AdListener
+    {
+        private HuaweiService.ads.InterstitialAd ad;
+        public MAdListener(HuaweiService.ads.InterstitialAd _ad) : base()
+        {
+            ad = _ad;
+        }
+        public override void onAdLoaded()
+        {
+           
+            ad.show();
+        }
+
+        public override void onAdFailed(int arg0)
+        {
+        }
+
+        public override void onAdOpened()
+        {
+        }
+
+        public override void onAdClicked()
+        {
+        }
+
+        public override void onAdLeave()
+        {
+        }
+
+        public override void onAdClosed()
+        {
+        }
+    }
+
+    public void showAd()
+    {
+		HuaweiService.ads.InterstitialAd ad = new HuaweiService.ads.InterstitialAd(new Context());
+        ad.setAdId("teste9ih9j0rc3"); //此处为测试广告ID
+        ad.setAdListener(new MAdListener(ad));
+		HuaweiService.ads.AdParam.Builder builder = new HuaweiService.ads.AdParam.Builder();
+		HuaweiService.ads.AdParam adParam = builder.build();
+        ad.loadAd(adParam);
+    }
 }

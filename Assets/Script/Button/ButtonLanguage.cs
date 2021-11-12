@@ -7,6 +7,7 @@ public class ButtonLanguage : MonoBehaviour {
 	public GameObject languageManager;
 	public GameObject canvasManager;
 	public LanguageManager.Language language;
+	public GameManager gm;
 
 	// Use this for initialization
 	void Start () {
