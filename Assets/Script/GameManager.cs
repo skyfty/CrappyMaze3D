@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour {
     public void showAd()
     {
 		HuaweiService.ads.InterstitialAd ad = new HuaweiService.ads.InterstitialAd(new Context());
-        ad.setAdId("teste9ih9j0rc3"); //此处为测试广告ID
+        ad.setAdId("l01h91tkd4"); //此处为测试广告ID
         ad.setAdListener(new MAdListener(ad));
 		HuaweiService.ads.AdParam.Builder builder = new HuaweiService.ads.AdParam.Builder();
 		HuaweiService.ads.AdParam adParam = builder.build();

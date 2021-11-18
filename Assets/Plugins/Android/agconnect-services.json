@@ -1,4 +1,10 @@
 {
+	"agcgw":{
+		"backurl":"connect-drcn.hispace.hicloud.com",
+		"url":"connect-drcn.dbankcloud.cn",
+		"websocketbackurl":"connect-ws-drcn.hispace.dbankcloud.com",
+		"websocketurl":"connect-ws-drcn.hispace.dbankcloud.cn"
+	},
 	"agcgw_all":{
 		"CN":"connect-drcn.dbankcloud.cn",
 		"CN_back":"connect-drcn.hispace.hicloud.com",
@@ -7,42 +13,61 @@
 		"RU":"connect-drru.dbankcloud.cn",
 		"RU_back":"connect-drru.hispace.hicloud.com",
 		"SG":"connect-dra.dbankcloud.cn",
-		"SG_back":"connect-dra.hispace.hicloud.com",
-		"backurl":"connect-drcn.dbankcloud.cn",
-		"url":"connect-drcn.hispace.hicloud.com"
+		"SG_back":"connect-dra.hispace.hicloud.com"
 	},
 	"client":{
 		"cp_id":"2850086000413601428",
-		"product_id":"737518067793697797",
-		"client_id":"757287716915266560",
-		"client_secret":"64530A5F360648305725643DF36279EFF7CF826540C320F7D61CD76EEE1A8BE4",
-		"project_id":"737518067793697797",
-		"app_id":"104934267",
-		"api_key":"CwEAAAAAOc46FEX+PF+gU0kwsJrygqcwsmpgoG1N7XeIHENIepO5S41mpp3vsSWShjZUwSRPFSNXw2eOYP6WAb8mSM6LQKYFkFs=",
-		"package_name":"com.touchmagic.CrappySurvival"
+		"product_id":"737518067793738753",
+		"client_id":"762811469254380928",
+		"client_secret":"D2D2ACD90103E1B4A8F7B05E4B344EC49628811BF4226A3718D7CD9811E4316F",
+		"project_id":"737518067793738753",
+		"app_id":"104985359",
+		"api_key":"CwEAAAAAU00/8ZW4zth7bY1Ftpj3C3ETfD2cju1+9BpstfBp1Hp2w1zUPU0fK6+0Mr0b7JobJATrq9wEHYJPRw4+0Aw6zyKc7ts=",
+		"package_name":"com.touchmagic.CrappyMaze3D"
 	},
 	"oauth_client":{
-		"client_id":"104934267",
+		"client_id":"104985359",
 		"client_type":1
 	},
 	"app_info":{
-		"app_id":"104934267",
-		"package_name":"com.touchmagic.CrappySurvival"
+		"app_id":"104985359",
+		"package_name":"com.touchmagic.CrappyMaze3D"
 	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-drcn.dt.hicloud.com,datacollector-drcn.dt.dbankcloud.cn",
+			"collector_url_ru":"datacollector-drru.dt.hicloud.com,datacollector-drru.dt.dbankcloud.cn",
+			"collector_url_sg":"datacollector-dra.dt.hicloud.com,datacollector-dra.dt.dbankcloud.cn",
+			"collector_url_de":"datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn",
+			"collector_url_cn":"datacollector-drcn.dt.hicloud.com,datacollector-drcn.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"search":{
+			"url":"https://search-drcn.cloud.huawei.com"
+		},
+		"cloudstorage":{
+			"storage_url":"https://agc-storage-drcn.platform.dbankcloud.cn"
+		},
+		"ml":{
+			"mlservice_url":"ml-api-drcn.ai.dbankcloud.com,ml-api-drcn.ai.dbankcloud.cn"
+		}
+	},
+	"region":"CN",
 	"configuration_version":"3.0",
 	"appInfos":[
 		{
-			"package_name":"com.touchmagic.CrappySurvival",
+			"package_name":"com.touchmagic.CrappyMaze3D",
 			"client":{
-				"app_id":"104934267"
+				"app_id":"104985359"
 			},
 			"app_info":{
-				"package_name":"com.touchmagic.CrappySurvival",
-				"app_id":"104934267"
+				"package_name":"com.touchmagic.CrappyMaze3D",
+				"app_id":"104985359"
 			},
 			"oauth_client":{
 				"client_type":1,
-				"client_id":"104934267"
+				"client_id":"104985359"
 			}
 		}
 	]
